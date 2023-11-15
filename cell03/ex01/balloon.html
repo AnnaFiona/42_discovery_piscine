@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>cell03-ex01</title>
+	<style>
+		.balloon {
+			border-radius: 50%;
+		}
+	</style>
+</head>
+<body>
+	<div id="balloon" class="balloon" style="height: 200px; width: 200px; background-color: red;" onclick="growBalloon()" onmouseleave="shrinkBalloon()"></div>
+
+	<script>
+		function growBalloon()
+		{
+			let balloon = document.getElementById("balloon");
+
+			if (balloon.style.height != "420px") {
+				balloon.style.height = parseInt(balloon.style.height) + 10 + "px";
+				balloon.style.width = parseInt(balloon.style.width) + 10 + "px";
+			}
+			else {
+				balloon.style.height = "200px";
+				balloon.style.width = "200px";
+			}
+
+			switch (balloon.style.backgroundColor) {
+				case "red":
+					balloon.style.backgroundColor = "green";
+					break;
+				case "green":
+					balloon.style.backgroundColor = "blue";
+					break;
+				case "blue":
+					balloon.style.backgroundColor = "red";
+					break;
+			}
+		}
+		function shrinkBalloon()
+		{
+			let balloon = document.getElementById("balloon");
+
+			if (balloon.style.height != "200px") {
+				balloon.style.height = parseInt(balloon.style.height) - 5 + "px";
+				balloon.style.width = parseInt(balloon.style.width) - 5 + "px";
+			}
+
+			switch (balloon.style.backgroundColor) {
+				case "red":
+					balloon.style.backgroundColor = "blue";
+					break;
+				case "green":
+					balloon.style.backgroundColor = "red";
+					break;
+				case "blue":
+					balloon.style.backgroundColor = "green";
+					break;
+			}
+		}
+	</script>
+</body>
+</html>

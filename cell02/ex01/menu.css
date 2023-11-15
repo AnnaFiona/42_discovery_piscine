@@ -1,0 +1,44 @@
+body {
+	text-align: center;
+}
+
+.dropdown {
+	position: relative;
+	display: inline-block;
+}
+.dropdown:hover .dropdown-button{
+	background-color: rgb(25, 80, 83);
+	color: rgb(123, 173, 175);
+}
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+
+.dropdown-button {
+	background-color: rgb(123, 173, 175);
+	color:rgb(25, 80, 83);
+
+	padding-inline: 20px;
+	padding: 10px;
+
+	text-align: center;
+	font-weight: bold;
+	font-size: large;
+}
+
+.dropdown-content {
+	position: absolute;
+	display: none;
+	width: 100%;
+}
+.dropdown-content a {
+	display: block;
+
+	background-color: rgb(123, 173, 175);
+	color: rgb(25, 80, 83);
+	text-decoration: none;
+	padding: 5px;
+}
+.dropdown-content a:hover {
+	background-color: rgb(85, 136, 138);
+}

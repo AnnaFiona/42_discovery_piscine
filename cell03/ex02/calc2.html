@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>cell03-ex02</title>
+	<style>
+		body {
+			height: 100vh;
+			margin: 0;
+		}
+		.center {
+			justify-content: center;
+			align-items: center;
+			display: flex;
+			height: 100%;
+		}
+		input {
+			border: none;
+			text-align: center;
+		/* 	height: 50px;
+			width: 50px; */
+			background-color: rgb(34, 134, 134);
+			/* background-color: rgb(25, 80, 83); */
+			background-color: rgb(123, 173, 175);
+			/* background-color: rgb(85, 136, 138); */
+			font-size: 30px;
+		}
+		select {
+			background-color: rgb(34, 134, 134);
+			background-color: rgb(123, 173, 175);
+			background-color: rgb(85, 136, 138);
+			/* background-color: rgb(25, 80, 83); */
+			font-size: 30px;
+			border: none;
+		}
+	</style>
+</head>
+<body>
+	<div class="center">
+		<input id="left-field" class="input-field" type="text" style="border-top-left-radius: 7px; border-bottom-left-radius: 7px;">
+		<select>
+			<option value="+">+</option>
+			<option value="-">-</option>
+			<option value="*">*</option>
+			<option value="/">/</option>
+			<option value="%">%</option>
+		</select>
+		<input id="right-field" class="input-field" type="text" style="border-top-right-radius: 7px; border-bottom-right-radius: 7px;">
+	</div>
+</body>
+<script>
+	function putOperator(operator)
+	{
+		document.getElementById("operator-field").value=operator;
+	}
+</script>
+</html>

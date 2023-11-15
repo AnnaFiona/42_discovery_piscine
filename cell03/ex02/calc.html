@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>cell03-ex02</title>
+	<style>
+		body {
+			height: 100vh;
+			margin: 0;
+		}
+		.center {
+			justify-content: center;
+			align-items: center;
+			display: flex;
+			height: 100%;
+		}
+		input {
+			border-radius: 7px;
+			text-align: center;
+			height: 50px;
+			width: 50px;
+			background-color: aquamarine;
+			font-size: 30px;
+		}
+		.input-field {
+			width: 100px;
+			
+		}
+	</style>
+</head>
+<body>
+	<div class="center">
+		<table style="border: 1px solid black; margin: 0;">
+			<tr>
+				<td colspan="2"><input id="left-field" class="input-field" type="text"></td>
+				<td><input id="operator-field" type="text" readonly></td>
+				<td colspan="2"><input id="right-field" class="input-field" type="text"></td>
+			</tr>
+			<tr>
+				<td><input type="button" value="+" onclick='putOperator("+")'></td>
+				<td><input type="button" value="-" onclick='putOperator("-")'></td>
+				<td><input type="button" value="/" onclick='putOperator("/")'></td>
+				<td><input type="button" value="*" onclick='putOperator("*")'></td>
+				<td><input type="button" value="%" onclick='putOperator("%")'></td>
+			</tr>
+		</table>
+	</div>
+</body>
+<script>
+	function putOperator(operator)
+	{
+		document.getElementById("operator-field").value=operator;
+	}
+</script>
+</html>
